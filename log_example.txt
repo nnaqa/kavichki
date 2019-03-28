@@ -1,0 +1,57 @@
+C:\..python.exe C:/../kavichki/main_test.py
+
+Connecting to the PostgreSQL database...
+Previous main_test table has been deleted
+test_0_check_header (__main__.TestMain)
+Проверка заголовка страницы ... ok
+test_1_add_new_row (__main__.TestMain)
+Добавление новых данных в таблицу ... ok
+test_2_compare_new_row_with_db (__main__.TestMain)
+Сравнение новых данных с данными в БД ... ok
+test_3_check_new_row_contains (__main__.TestMain)
+Проверка корректности занесения новых данных ... 
+Что_купить - значения совпадают
+Количество - значения не совпадают
+стоимсть_кр - значения не совпадают
+Действия - значения совпадают
+FAIL
+test_4_check_reset_lnk (__main__.TestMain)
+Проверка функционала для ссылки "Сбросить" ... FAIL
+test_5_compare_new_row_with_db (__main__.TestMain)
+Проверка того, что введенные данные присутстуют в таблице после перезагрузки страницы ... FAIL
+
+======================================================================
+FAIL: test_3_check_new_row_contains (__main__.TestMain)
+Проверка корректности занесения новых данных
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:/apps/test_report/kavichki/main_test.py", line 118, in test_3_check_new_row_contains
+    self.fail('Новая строка занесена не корректно')
+AssertionError: Новая строка занесена не корректно
+
+======================================================================
+FAIL: test_4_check_reset_lnk (__main__.TestMain)
+Проверка функционала для ссылки "Сбросить"
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:/apps/test_report/kavichki/main_test.py", line 134, in test_4_check_reset_lnk
+    self.fail('Ссылка Сбросить не работает - введенные данные не удалены')
+AssertionError: Ссылка Сбросить не работает - введенные данные не удалены
+
+======================================================================
+FAIL: test_5_compare_new_row_with_db (__main__.TestMain)
+Проверка того, что введенные данные присутстуют в таблице после перезагрузки страницы
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:/apps/test_report/kavichki/main_test.py", line 142, in test_5_compare_new_row_with_db
+    self.fail('Новая строка не сохранена. После обновления страницы - введенные данные отсутствуют.')
+AssertionError: Новая строка не сохранена. После обновления страницы - введенные данные отсутствуют.
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.350s
+
+FAILED (failures=3)
+
+Database connection closed.
+
+Process finished with exit code 0
